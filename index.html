@@ -1,0 +1,49 @@
+<!-- PROMPT 
+ 
+Necesito que me ayudes a crear los archivos HTML css y js para una página sencilla donde se le pida al usuario los datos para crear un objeto con el nombre, el puesto y una breve descripción de una persona, además de pedirle la url para una imagen de esta persona. Para esto debe haber 4 inputs, y 2 botones, uno para crear otro objeto, y otro para mostrar todos los objetos en forma de tarjetas hasta abajo de la página. Debes cerciorarte que todos los inputs tengan algo antes de crear cada objeto. Aunque la página sea sencilla, el código css debe hacer que se vea elegante y moderna
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Personas</h1>
+        
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre de la persona">
+        </div>
+        
+        <div class="form-group">
+            <label for="puesto">Puesto:</label>
+            <input type="text" id="puesto" placeholder="Puesto de la persona">
+        </div>
+        
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" placeholder="Breve descripción">
+        </div>
+        
+        <div class="form-group">
+            <label for="imagen">URL de la Imagen:</label>
+            <input type="url" id="imagen" placeholder="URL de la imagen">
+        </div>
+        
+        <div class="buttons">
+            <button onclick="crearPersona()">Crear Persona</button>
+            <button onclick="mostrarPersonas()">Mostrar Personas</button>
+        </div>
+        
+        <div id="tarjetas" class="tarjetas"></div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
